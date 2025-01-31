@@ -7,43 +7,39 @@ use Illuminate\Http\Request;
 
 class AlumnoController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        return Alumno::all();
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+    public function show($id)
+    {
+        return Alumno::findOrFail($id);
+    }
+
     public function store(Request $request)
     {
-        //
+        return Alumno::create($request->all());
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function update(Request $request, $id)
     {
-        //
+        $alumno = Alumno::findOrFail($id);
+        $alumno->update($request->all());
+        return $alumno;
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    public function destroy($id)
     {
-        //
+        Alumno::destroy($id);
+        return response()->json(['message' => 'Alumno eliminado']);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
+    public function testEjer1(string $id)
     {
-        //
+        $alumno = Alumno::find($id);
+        $alumno->profesor();
+        $alumno->cursos();
+        return $alumno;
     }
 }
