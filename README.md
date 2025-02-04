@@ -1,3 +1,27 @@
+# Descripción del problema Practica 3
+
+La academia requiere un sistema para organizar alumnos, profesores, cursos y asignaturas. 
+Actualmente, la gestión manual dificulta la planificación y el seguimiento académico.
+
+Requisitos del sistema:
+
+Alumnos: 
+Cada estudiante tiene un identificador, nombre, apellido y edad, y está asignado a un profesor.
+
+Profesores: 
+Cuentan con un identificador, nombre y tarifa. Un profesor puede tener varios alumnos.
+
+Cursos: 
+Cada curso tiene un nombre, se asocia a una asignatura y puede incluir varios alumnos.
+
+Asignaturas: 
+Se registran con nombre, hora inicio y hora fin. Pueden ser impartidas por múltiples profesores y asociarse a varios cursos.
+
+Objetivo: 
+Gestionar inscripciones, asignaciones y horarios de manera eficiente.
+
+#
+
 # Wow
 Way of working Practica 3
 
