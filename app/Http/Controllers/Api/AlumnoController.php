@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Models\Alumno;
+use App\Models\Profesor;
+use App\Models\Curso;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 

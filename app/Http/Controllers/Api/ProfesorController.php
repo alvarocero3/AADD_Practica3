@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Models\Profesor;
+use App\Models\Asignatura;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -11,8 +13,9 @@ class ProfesorController extends Controller {
         return Profesor::with('asignaturas')->get();
     }
 
-    public function show(Profesor $profesor) {
-        return $profesor->load('asignaturas');
+    public function show($id) {
+        $profesor = Profesor::with('asignaturas')->find($id);
+        return $profesor;
     }
 
     public function store(Request $request) {
@@ -20,12 +23,14 @@ class ProfesorController extends Controller {
         return response()->json($profesor, 201);
     }
 
-    public function update(Request $request, Profesor $profesor) {
+    public function update(Request $request, $id) {
+        $profesor = Profesor::find($id);
         $profesor->update($request->all());
         return response()->json($profesor, 200);
     }
 
-    public function destroy(Profesor $profesor) {
+    public function destroy($id) {
+        $profesor = Profesor::find($id);
         $profesor->delete();
         return response()->json(null, 204);
     }

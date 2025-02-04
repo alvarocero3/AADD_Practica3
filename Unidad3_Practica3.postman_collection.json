@@ -1,0 +1,447 @@
+{
+	"info": {
+		"_postman_id": "3254b949-f4dd-4869-927a-a840a6450086",
+		"name": "Unidad3_Practica3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40931488"
+	},
+	"item": [
+		{
+			"name": "mostrar profesores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/profesores",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"profesores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mostrar profesor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/profesores/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"profesores",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Profesor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/profesores?nombre_profesor=Paco&particular=1&precio=1200",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"profesores"
+					],
+					"query": [
+						{
+							"key": "nombre_profesor",
+							"value": "Paco"
+						},
+						{
+							"key": "particular",
+							"value": "1"
+						},
+						{
+							"key": "precio",
+							"value": "1200"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar profesor",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/profesores/1?nombre_profesor=PAquito",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"profesores",
+						"1"
+					],
+					"query": [
+						{
+							"key": "nombre_profesor",
+							"value": "PAquito"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "borrar profesor",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/profesores/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"profesores",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mostrar cursos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/cursos",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cursos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mostrar 1 Curso",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/cursos/9",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cursos",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Cursos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/cursos?alumno_id=2&asignatura_id=1&nombre_curso=AADD",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cursos"
+					],
+					"query": [
+						{
+							"key": "alumno_id",
+							"value": "2"
+						},
+						{
+							"key": "asignatura_id",
+							"value": "1"
+						},
+						{
+							"key": "nombre_curso",
+							"value": "AADD"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar curso",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/cursos?alumno_id=2&asignatura_id=1&nombre_curso=AADD",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cursos"
+					],
+					"query": [
+						{
+							"key": "alumno_id",
+							"value": "2"
+						},
+						{
+							"key": "asignatura_id",
+							"value": "1"
+						},
+						{
+							"key": "nombre_curso",
+							"value": "AADD"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar curso",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/cursos/8",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cursos",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mostrar asignaturas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/asignaturas",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"asignaturas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Asignatura",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/asignaturas?nombre_asignatura=AADD&hora_inicio=10&hora_fin=20",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"asignaturas"
+					],
+					"query": [
+						{
+							"key": "nombre_asignatura",
+							"value": "AADD"
+						},
+						{
+							"key": "hora_inicio",
+							"value": "10"
+						},
+						{
+							"key": "hora_fin",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Alumno",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/alumnos?nombre_alumno=Patxi&apellido_alumno=Galvez&edad_alumno=22&profesor_id=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"alumnos"
+					],
+					"query": [
+						{
+							"key": "nombre_alumno",
+							"value": "Patxi"
+						},
+						{
+							"key": "apellido_alumno",
+							"value": "Galvez"
+						},
+						{
+							"key": "edad_alumno",
+							"value": "22"
+						},
+						{
+							"key": "profesor_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mostrar alumnos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/alumnos",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"alumnos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

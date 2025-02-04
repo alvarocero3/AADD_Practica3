@@ -2,48 +2,47 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Models\Asignatura;
+use App\Models\Curso;
+use App\Models\Profesor;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class AsignaturaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        return Asignatura::all();
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+    public function show($id)
+    {
+        return Asignatura::findOrFail($id);
+    }
+
     public function store(Request $request)
     {
-        //
+        return Asignatura::create($request->all());
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function update(Request $request, $id)
     {
-        //
+        $asignatura = Asignatura::findOrFail($id);
+        $asignatura->update($request->all());
+        return $asignatura;
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    public function destroy($id)
     {
-        //
+        Asignatuea::destroy($id);
+        return response()->json(['message' => 'Asignatura eliminado']);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
+    public function testEjer2(string $id)
     {
-        //
+        $asignatura = Asignatura::find($id);
+        $asignatura->profesor();
+        $asignatura->cursos();
+        return $asignatura;
     }
 }

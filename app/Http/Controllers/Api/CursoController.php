@@ -2,48 +2,47 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Models\Curso;
+use App\Models\Alumno;
+use App\Models\Asignatura;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class CursoController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        return Curso::all();
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+    public function show($id)
+    {
+        return Curso::findOrFail($id);
+    }
+
     public function store(Request $request)
     {
-        //
+        return Curso::create($request->all());
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function update(Request $request, $id)
     {
-        //
+        $curso = Curso::findOrFail($id);
+        $curso->update($request->all());
+        return $curso;
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    public function destroy($id)
     {
-        //
+        Curso::destroy($id);
+        return response()->json(['message' => 'Curso eliminado']);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
+    public function testEjer3(string $id)
     {
-        //
+        $curso = Curso::find($id);
+        $curso->alumno();
+        $curso->asignatura();
+        return $curso;
     }
 }

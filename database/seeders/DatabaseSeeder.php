@@ -1,8 +1,8 @@
 <?php
-
-
 use Illuminate\Database\Seeder;
 use App\Models\Profesor;
+use App\Models\Asignatura;
+use App\Models\Curso;
 use App\Models\Alumno;
 class DatabaseSeeder extends Seeder {
     public function run() {
